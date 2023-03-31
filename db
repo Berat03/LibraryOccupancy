@@ -1,0 +1,6 @@
+CREATE TABLE occupancy (
+    id SERIAL PRIMARY KEY,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    count INTEGER NOT NULL
+);
