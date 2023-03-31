@@ -9,14 +9,12 @@ c = conn.cursor()
 #     time TIME,
 #     count INTEGER
 #     )""")
+def add_new(event):
+    c.execute("INSERT INTO OCCUPANCY VALUES (:date, :time, :count)", {'date': event.date, 'time': event.time, 'count': event.count})
 
-c.execute("INSERT INTO OCCUPANCY VALUES (:date, :time, :count)",
-          {'date': event.date, 'time': event.time, 'count': event.count})
-
-
-c.execute("SELECT * FROM OCCUPANCY")
-
-print(c.fetchall())
+#add_new(event)
+c.execute("SELECT * FROM OCCUPANCY ORDER BY date DESC, time DESC")
+print(c.fetchmany(3))
 
 conn.commit()  # don't forget to commit changes
 conn.close()  # good practise
