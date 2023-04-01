@@ -1,8 +1,5 @@
-# LibraryOccupancy
-A website to track and learn the trends of how busy my universities main library is as a given date or time.
+# Tracking Bill Bryson Library Occupancy
 
-<br>
-<br>
-Todo:
-Website
-Can track free study rooms as well.
+### Why?
+
+### How?
